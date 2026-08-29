@@ -14,7 +14,7 @@ begin
     -- Async: pg_net queues the request and returns immediately, so a slow or
     -- failing APNs call never blocks or rolls back the INSERT.
     perform net.http_post(
-        url     := 'https://wiolsfvkbfvsqmnfqyqq.supabase.co/functions/v1/send-push',
+        url     := 'https://<your-project-ref>.supabase.co/functions/v1/send-push',
         headers := jsonb_build_object(
             'Content-Type',     'application/json',
             'x-webhook-secret', 'REPLACE_WITH_YOUR_WEBHOOK_SECRET'
