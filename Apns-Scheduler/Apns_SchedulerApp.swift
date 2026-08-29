@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Apns_SchedulerApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(appDelegate.pushManager)
         }
     }
 }
